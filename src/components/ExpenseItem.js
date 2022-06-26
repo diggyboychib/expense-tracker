@@ -2,7 +2,8 @@ import React from "react";
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "./Card";
-function ExpenseItem({ title, amount, date }) {
+import ExpensesFilter from "./ExpensesFilter";
+function ExpenseItem({ title, amount, date, setExpenses, expenses }) {
   return (
     <Card className="expense-item">
       <div>
