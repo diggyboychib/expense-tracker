@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
-function ExpenseForm({ setExpenses }) {
+function ExpenseForm({ setExpenses, setShowForm }) {
   const [expenseObj, setExpenseObj] = useState({
     id: null,
     title: "",
@@ -64,7 +64,9 @@ function ExpenseForm({ setExpenses }) {
           />
         </div>
       </div>
+
       <div className="new-expense__actions">
+        <button onClick={() => setShowForm(false)}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
